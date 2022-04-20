@@ -16,4 +16,6 @@ jobs:
         id: checkout
         
       - name: run doxygen
-        run: pwd
+        run: |
+          pwd
+          sudo apt-get install doxygen
