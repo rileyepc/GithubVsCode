@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v2
         id: checkout
         
-      - name: doxygen config
-        run: doxygen -g dconfig
+      - name: doxygen clone
+        run: git clone https://github.com/doxygen/doxygen.git
            
