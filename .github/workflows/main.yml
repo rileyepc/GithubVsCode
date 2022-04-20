@@ -19,3 +19,4 @@ jobs:
         run: |
           pwd
           sudo apt-get install doxygen
+          doxygen Doxyfile
