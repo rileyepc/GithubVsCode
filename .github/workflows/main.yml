@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "**"
+  pull_request:
+    types: [ labeled ]
+    
+jobs:
+  prod-check:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+        id: checkout
+        
+      - name: echo message
+        id: message
+        run: echo "this is a test"
+      
+      - name: print steps
+        run: |
+          echo "Output = ${{steps.message.outcome}}" >> $Env:GITHUB_ENV
+          
+      - name: echo outcome
+        run: echo "{$Env:Output}"
+          
+      - name: pass or fail
+        if: ${{steps.message.outcome != 'success'}}
+        run: exit 1
+           
