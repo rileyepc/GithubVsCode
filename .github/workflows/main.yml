@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v2
         id: checkout
         
-      - name: doxyegn config
-        run: echo "doxygen -g dconfig"
+      - name: doxygen config
+        run: doxygen -g dconfig
            
