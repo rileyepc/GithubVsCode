@@ -20,4 +20,7 @@ jobs:
         
       - name: make directory build
         run: mkdir build; cd build
+        
+      - name: cmake
+        run: cmake -G "Unix Makefiles" ..
            
