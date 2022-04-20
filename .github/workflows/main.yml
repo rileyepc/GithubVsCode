@@ -10,11 +10,10 @@ on:
     
 jobs:
   prod-check:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         id: checkout
         
-      - name: doxygen change directory
-        run: cd doxygen
-           
+      - name: run doxygen
+        run: pwd
