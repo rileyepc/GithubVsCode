@@ -15,6 +15,9 @@ jobs:
       - uses: actions/checkout@v2
         id: checkout
         
-      - name: doxygen clone
-        run: git clone https://github.com/doxygen/doxygen.git
+      - name: doxygen change directory
+        run: cd doxygen
+        
+      - name: make directory build
+        run: mkdir build; cd build
            
